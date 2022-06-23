@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		@await Html.PartialAsync("metatagsPartial")
+		@await Html.PartialAsync("cssPartial")
+	</head>
+	<body class="is-preload">
+	<div>
+		@await Html.PartialAsync("navPartial")
+		<div>
+			<div>
+				<article id="top" class="wrapper style1">
+				<div class="container">
+					<div class="row">
+						@await Html.PartialAsync("firstScroll")
+						</div>
+				</div>
+				</article>
+				<div>
+					@RenderBody()
+					<div>
+						@await Html.PartialAsync("portfolioPartial")
+					</div>
+					@await Html.PartialAsync("contactPartial")
+				</div>
+			</div>
+		</div>
+	</div>
+	@await Html.PartialAsync("scriptsPartial")
+	</body>
+</html>
